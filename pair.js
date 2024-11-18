@@ -59,14 +59,14 @@ router.get('/', async (req, res) => {
             if (phoneNumber) {
                 phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
                 if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-                    return res.status(400).send("Commencez par le code du pays de votre numéro WhatsApp, exemple : +24102150169");
+                    return res.status(400).send("Commencez par le code du pays de votre numéro WhatsApp, exemple : +24160338758");
                 }
             } else {
-                phoneNumber = await question(chalk.bgBlack(chalk.greenBright("Veuillez saisir votre numéro WhatsApp \nPar exemple : +24102150169 : ")));
+                phoneNumber = await question(chalk.bgBlack(chalk.greenBright("Veuillez saisir votre numéro WhatsApp \nPar exemple : +24160338758 : ")));
                 phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
 
                 if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-                    return res.status(400).send("Commencez par le code du pays de votre numéro WhatsApp, exemple : +24102150169");
+                    return res.status(400).send("Commencez par le code du pays de votre numéro WhatsApp, exemple : +24160338758");
                 }
             }
 
@@ -83,15 +83,15 @@ router.get('/', async (req, res) => {
             const { connection, lastDisconnect } = s;
             if (connection === "open") {
                 await delay(10000);
-                await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*◕ ⚠️ ᴘʟᴇᴀꜱᴇ ᴅᴏ ɴᴏᴛ ꜱʜᴀʀᴇ ʏᴏᴜʀ ᴄʀᴇᴅ.ᴊꜱᴏɴ ꜰɪʟᴇ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ ᴘʟᴇᴀꜱᴇ ᴜꜱᴇ ᴛʜᴇ ᴠᴇʀꜱɪᴏɴ ᴏꜰ ᴛᴏɢᴇ ᴏʀ ʙᴜɢ ᴊᴏɪɴ ᴛʜᴇ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀɴᴅ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ꜰᴏʀ ᴜᴘᴅᴀᴛᴇꜱ ᴛᴏ ᴄᴏᴍᴇ ʙᴇꜱᴛ ʀᴇɢᴀʀᴅꜱ ᴛᴏɢᴇ ɪɴᴜᴍᴀᴋɪ.*` });
-                await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*ɢʀᴏᴜᴘ:* https://chat.whatsapp.com/JQ4s2pJuBReE7YL9wKJPHo\n*ᴄʜᴀɴᴇʟ:* https://whatsapp.com/channel/0029VaiuD4s4IBhI0fzbv40Z\n*ʏᴏᴜᴛᴜʙᴇ:* https://youtube.com/@kenzo3146?si=yQm520ceKaW7ZVbQ\n*ɪɴꜱᴛᴀɢʀᴀᴍ:* https://www.instagram.com/lawliet.kfx\n*ɢɪᴛʜᴜʙ:* https://github.com/toge012345` });
+                await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*◕ ⚠️ 𝚀𝚄𝙴𝙴𝙽-𝚂𝙾𝙵𝙸𝙰 𝚂𝙴𝚂𝚂𝙸𝙾𝙽 𝙸𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝙰𝚅𝙴𝙲 𝚂𝚄𝙲𝙲𝙴𝚂 𝙵𝙴𝙻𝙸𝙲𝙸𝚃𝙰𝚃𝙸𝙾𝙽 𝚅𝙾𝚄𝚂 𝙰𝚅𝙴𝚉 𝙵𝚁𝙰𝙽𝙲𝙷𝙸𝚃 𝙻𝙰 𝙿𝚁𝙴𝙼𝙸𝙴𝚁𝙴 𝙴𝚃𝙰𝙿𝙴 𝙳𝚄 𝙳𝙴𝙿𝙻𝙾𝙸𝙴𝙼𝙴𝙽𝚃 𝙽’𝙾𝚄𝙱𝙻𝙸𝙴𝚉 𝙿𝙰𝚂 𝙳𝙴 𝙼𝙴 𝚂𝚄𝙸𝚅𝚁𝙴 𝙳𝙰𝙽𝚂 𝙼𝙴𝚂 𝙳𝙸𝙵𝙵𝙴𝚁𝙴𝙽𝚃 𝚁𝙴𝚂𝙴𝙰𝚄𝚇.*` });
+                await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*ɢʀᴏᴜᴘ:* https://chat.whatsapp.com/Lab7eeUSWBxGL4k2ku73gK\nfollow my ofcl Channel:https://whatsapp.com/channel/0029VaoRh0h2UPBAyRobHB2t\n*ɢɪᴛʜᴜʙ:* https://github.com/DADDY-IGWE` });
                 
                 let sessionXeon = fs.readFileSync('./sessions/creds.json');
                 await delay(2000);
                 const xeonses = await XeonBotInc.sendMessage(XeonBotInc.user.id, { document: sessionXeon, mimetype: 'application/json', fileName: 'creds.json' });
                 await XeonBotInc.groupAcceptInvite("Kjm8rnDFcpb04gQNSTbW2d");
                 await XeonBotInc.sendMessage(XeonBotInc.user.id, {
-                    text: `*TOGE-BUG-AI*
+                    text: `𝚀𝚄𝙴𝙴𝙽-𝚂𝙾𝙵𝙸𝙰
 
 
 
